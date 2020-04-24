@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import Listings from '../components/Listings'
 // import { removeCar } action here
-import { removeCar } from '../redux/actions'
+import { deleteShop } from '../redux/actions'
 
 const mapStateToProps = (state) => {
     return {
@@ -13,6 +13,7 @@ const mapStateToProps = (state) => {
 // add mapDispatchToProps function here
 const mapDispatchToProps = (dispatch) => {
     return {
+        deleteShop: (index) => dispatch(deleteShop(index))
     }
 }
 

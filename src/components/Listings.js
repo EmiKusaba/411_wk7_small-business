@@ -7,7 +7,7 @@ import {
     TableHead,
     TableRow
 } from '@material-ui/core'
-// import DeleteIcon from '@material-ui/icons/Delete'
+import DeleteIcon from '@material-ui/icons/Delete'
 
 // import AddCar from '../containers/AddCar'
  
@@ -28,6 +28,7 @@ const Listings = (props) => {
                         <TableCell>Hours</TableCell>
                         <TableCell>Address</TableCell>
                         <TableCell>Delete</TableCell>
+                            
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -42,10 +43,10 @@ const Listings = (props) => {
                         <TableCell>{shop["address"]}</TableCell>
                         <TableCell>{shop["delete"]}</TableCell>
                         <TableCell>
-                            {/* <DeleteIcon
+                        <DeleteIcon
                                 // add onClick method here
-                                onClick={() => props.removeCar(idx)}
-                                className="icon text-red" /> */}
+                                onClick={() => props.deleteShop(idx)}
+                                className="icon text-red" />
                         </TableCell>
                     </TableRow>
                 ))}

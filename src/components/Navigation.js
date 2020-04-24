@@ -3,6 +3,8 @@ import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 
+
+
 const Navigation = () => {
     return (
         <AppBar position="relative">
@@ -10,7 +12,7 @@ const Navigation = () => {
                 <IconButton color="inherit">
                     <MenuIcon />
                 </IconButton>
-                <Typography variant="h6" style={{ flexGrow: "1" }}>
+                <Typography variant="h6" style={{ flexGrow: "1" }} className="shopName">
                     Amy's Ice Cream
                 </Typography>
                 <ul className="nav-list">
