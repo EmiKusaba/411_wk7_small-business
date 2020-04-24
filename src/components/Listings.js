@@ -13,8 +13,8 @@ import {
  
 const Listings = (props) => {
     return (
-        <Container maxWidth="lg" className="car-container">
-            {/* <h4>Welcome, {props.user.username}</h4> */}
+        <Container maxWidth="lg" className="shop-container">
+            <h4>Welcome, {props.user.username}</h4>
             <div className="flex-container">
                 
                 {/* <AddCar carTotal={props.cars.length} /> */}

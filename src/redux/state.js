@@ -26,6 +26,20 @@ export default {
       "hours": "11:30am-10:00 pm",
       "address": "1012 W. 6th St Austin, TX 78703",
     },
+    {
+      "id": 4,
+      "name": "WESTLAKE/ROLLING WOOD",
+      "phone": "512 328-2697",
+      "hours": "11:30am-10:00 pm",
+      "address": "2805 Bee Caves Rd. #416 Austin, TX 78746",
+    },
+    {
+      "id": 5,
+      "name": "THE GROVE",
+      "phone": "512 282-2697",
+      "hours": "11:30am-10:00 pm",
+      "address": "9600 S. IH-35, Building C Ste. 400 Austin, TX 78748",
+    },
 
   ],
   makes: []

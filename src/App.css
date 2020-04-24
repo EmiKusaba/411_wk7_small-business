@@ -1,3 +1,19 @@
+.App {
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  width: 50%;
+}
+
+.login-button {
+  margin-top: 25px !important;
+}
+
+
 .card-container {
   display: flex;
   justify-content: space-between;
@@ -54,10 +70,10 @@ ul {
   margin: auto 20px;
 }
 
-.car-container {
+.shop-container {
   margin: 50px;
 }
 
-.car-paper {
+.shop-paper {
   padding: 50px;
 }
