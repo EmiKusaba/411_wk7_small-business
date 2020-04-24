@@ -28,7 +28,6 @@ const Listings = (props) => {
                         <TableCell>Hours</TableCell>
                         <TableCell>Address</TableCell>
                         <TableCell>Delete</TableCell>
-                            
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -41,7 +40,6 @@ const Listings = (props) => {
                         <TableCell>{shop["phone"]}</TableCell>
                         <TableCell>{shop["hours"]}</TableCell>
                         <TableCell>{shop["address"]}</TableCell>
-                        <TableCell>{shop["delete"]}</TableCell>
                         <TableCell>
                         <DeleteIcon
                                 // add onClick method here
