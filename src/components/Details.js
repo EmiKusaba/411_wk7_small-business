@@ -14,7 +14,8 @@ const Details = (props) => {
                 
                 {
                     Object.keys(shop).map((key, idx) => {
-                        return <Chip label={`${key}: ${shop[key]}`}></Chip>
+                      return <h3>{`${key}: ${shop[key]}`}</h3>
+                        //return <Chip label={`${key}: ${shop[key]}`}></Chip>
                     })
                 }
             </Paper>

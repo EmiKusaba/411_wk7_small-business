@@ -37,7 +37,7 @@ const Listings = (props) => {
                         <TableCell component="th" scope="row">
                             {shop.id}
                         </TableCell>
-                        <TableCell><Link to={`/shop/${shop.id}`}>{shop["name"]}</Link></TableCell>
+                        <TableCell style={{"color": "blue", "text-decoration": "underline"}}><Link to={`/shop/${shop.id}`}>{shop["name"]}</Link></TableCell>
                         <TableCell>{shop["phone"]}</TableCell>
                         <TableCell>{shop["hours"]}</TableCell>
                         <TableCell>{shop["address"]}</TableCell>
