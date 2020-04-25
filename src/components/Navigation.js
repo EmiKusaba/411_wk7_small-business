@@ -3,8 +3,6 @@ import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link } from 'react-router-dom'
 
-
-
 const Navigation = () => {
     return (
         <AppBar position="relative">
