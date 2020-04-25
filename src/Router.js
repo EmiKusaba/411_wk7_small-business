@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route, Redirect  } from 'react-router'
 import LogIn from './components/LogIn'
 import Listings from './containers/Listings'
+import Details from './containers/Details'
 import cookie from 'cookie'
 
 // Write checkAuth function here
@@ -28,6 +29,7 @@ const Router = () => {
         <Switch>
             <Route path="/listings" component={Listings} />
             <Route path="/login" component={LogIn} />
+            <Route path="/shop/:id" component={Details} />
           
         </Switch>
     );

@@ -8,6 +8,7 @@ import {
     TableRow
 } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
+import { Link } from 'react-router-dom'
 
 // import AddCar from '../containers/AddCar'
  
@@ -36,7 +37,7 @@ const Listings = (props) => {
                         <TableCell component="th" scope="row">
                             {shop.id}
                         </TableCell>
-                        <TableCell>{shop["name"]}</TableCell>
+                        <TableCell><Link to={`/shop/${shop.id}`}>{shop["name"]}</Link></TableCell>
                         <TableCell>{shop["phone"]}</TableCell>
                         <TableCell>{shop["hours"]}</TableCell>
                         <TableCell>{shop["address"]}</TableCell>
