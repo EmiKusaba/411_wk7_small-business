@@ -10,15 +10,11 @@ import {
 import DeleteIcon from '@material-ui/icons/Delete'
 import { Link } from 'react-router-dom'
 
-// import AddCar from '../containers/AddCar'
- 
 const Listings = (props) => {
     return (
         <Container maxWidth="lg" className="shop-container">
             <h4>Welcome, {props.user.username}</h4>
             <div className="flex-container">
-                
-                {/* <AddCar carTotal={props.cars.length} /> */}
             </div>
             <Table>
                 <TableHead>
@@ -32,23 +28,23 @@ const Listings = (props) => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                {props.shops.map((shop, idx) => (
-                    <TableRow key={shop.id}>
-                        <TableCell component="th" scope="row">
-                            {shop.id}
-                        </TableCell>
-                        <TableCell style={{"color": "blue", "text-decoration": "underline"}}><Link to={`/shop/${shop.id}`}>{shop["name"]}</Link></TableCell>
-                        <TableCell>{shop["phone"]}</TableCell>
-                        <TableCell>{shop["hours"]}</TableCell>
-                        <TableCell>{shop["address"]}</TableCell>
-                        <TableCell>
-                        <DeleteIcon
-                                // add onClick method here
-                                onClick={() => props.deleteShop(idx)}
-                                className="icon text-red" />
-                        </TableCell>
-                    </TableRow>
-                ))}
+                    {props.shops.map((shop, idx) => (
+                        <TableRow key={shop.id}>
+                            <TableCell component="th" scope="row">
+                                {shop.id}
+                            </TableCell>
+                            <TableCell style={{ "color": "blue", "text-decoration": "underline" }}><Link to={`/shop/${shop.id}`}>{shop["name"]}</Link></TableCell>
+                            <TableCell>{shop["phone"]}</TableCell>
+                            <TableCell>{shop["hours"]}</TableCell>
+                            <TableCell>{shop["address"]}</TableCell>
+                            <TableCell>
+                                <DeleteIcon
+                                    // add onClick method here
+                                    onClick={() => props.deleteShop(idx)}
+                                    className="icon text-red" />
+                            </TableCell>
+                        </TableRow>
+                    ))}
                 </TableBody>
             </Table>
         </Container>

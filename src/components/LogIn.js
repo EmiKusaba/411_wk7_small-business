@@ -5,7 +5,7 @@ import {
   Container
 } from '@material-ui/core'
 
-class App extends Component {
+class LogIn extends Component {
   state = {
     username: '',
     password: ''
@@ -48,7 +48,7 @@ class App extends Component {
               type="submit"
               className="login-button"
               variant="contained"
-              color="primary">Login</Button>
+              color="primary">SAVE</Button>
           </form>
         </Container>
       </div>
@@ -56,4 +56,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default LogIn;
