@@ -7,7 +7,7 @@ import AddShop from "./containers/AddShop";
 import cookie from 'cookie'
 
 // Write checkAuth function here
-const checkAuth = () => {
+export const checkAuth = () => {
   // Check cookie
   const cookies = cookie.parse(document.cookie)
   return cookies["loggedIn"] ? true : false
@@ -31,7 +31,7 @@ const Router = () => {
       <Route path="/listings" component={Listings} />
       <Route path="/login" component={LogIn} />
       <Route path="/shop/:id" component={Details} />
-      <Route path="/add" component={AddShop} />
+      <ProtectedRoute path="/add" component={AddShop} />
 
     </Switch>
   );

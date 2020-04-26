@@ -10,7 +10,7 @@ class AddShop extends Component {
     id: '',
     name: '',
     phone: '',
-    hour: '',
+    hours: '',
     address: '',
   }
 
@@ -37,7 +37,7 @@ class AddShop extends Component {
     return (
       <div className="LogIn">
         <Container maxWidth="sm">
-          <form className="Add-form" onSubmit={this.handleSubmit}>
+          <form className="login-form" onSubmit={this.handleSubmit}>
             <TextField
               required
               onChange={this.handleTextChange}
@@ -62,9 +62,9 @@ class AddShop extends Component {
             <TextField
               required
               onChange={this.handleTextChange}
-              value={this.state.hour}
-              name="hour"
-              label="Hour"
+              value={this.state.hours}
+              name="hours"
+              label="Hours"
               type="text" />
             <TextField
               required
@@ -75,7 +75,7 @@ class AddShop extends Component {
               type="text" />
             <Button
               type="submit"
-              className="save-button"
+              className="login-button"
               variant="contained"
               color="primary">Save</Button>
           </form>

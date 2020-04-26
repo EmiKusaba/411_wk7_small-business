@@ -1,9 +1,12 @@
 import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
+import cookie from "cookie";
 
-const Navigation = () => {
+const Navigation = (props) => {
+  const history = useHistory();
+
   return (
     <AppBar position="relative">
       <Toolbar>
@@ -23,9 +26,9 @@ const Navigation = () => {
           <li className="nav-list-item"
             onClick={() => {
               document.cookie = "loggedIn="
-              window.location.replace("/login")
+              history.push("/login");
             }}>
-            Logout
+            {cookie.parse(document.cookie)["loggedIn"] ? "Logout" : "Login"}
           </li>
         </ul>
       </Toolbar>

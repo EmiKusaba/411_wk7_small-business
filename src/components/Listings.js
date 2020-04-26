@@ -8,9 +8,12 @@ import {
     TableRow
 } from '@material-ui/core'
 import DeleteIcon from '@material-ui/icons/Delete'
-import { Link } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
+import { checkAuth } from "../Router";
 
 const Listings = (props) => {
+    const history = useHistory();
+
     return (
         <Container maxWidth="lg" className="shop-container">
             <h4>Welcome, {props.user.username}</h4>
@@ -40,7 +43,7 @@ const Listings = (props) => {
                             <TableCell>
                                 <DeleteIcon
                                     // add onClick method here
-                                    onClick={() => props.deleteShop(idx)}
+                                    onClick={() => checkAuth() ? props.deleteShop(idx) : history.push("/login")}
                                     className="icon text-red" />
                             </TableCell>
                         </TableRow>

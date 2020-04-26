@@ -22,7 +22,7 @@ class LogIn extends Component {
     // set cookie here
     // set loggedIn = true and max-age = 60*1000 (one minute)
     document.cookie = "loggedIn=true;max-age=60*1000"
-    window.location.replace("/listings")
+    this.props.history.push("/listings");
   }
 
   render() {
