@@ -22,10 +22,20 @@ class LogIn extends Component {
     // set cookie here
     // set loggedIn = true and max-age = 60*1000 (one minute)
     document.cookie = "loggedIn=true;max-age=60*1000"
+    this.props.setUser(this.state)
     this.props.history.push("/listings");
   }
 
+  logout = (e) => {
+    e.preventDefault()
+    // set cookie here
+    // set loggedIn = true and max-age = 60*1000 (one minute)
+    document.cookie = "loggedIn=true;max-age=60*1000"
+    this.props.setUser(null)
+    this.props.history.push("/listings");
+  }
   render() {
+    console.log(this.props)
     return (
       <div className="App">
         <Container maxWidth="sm">

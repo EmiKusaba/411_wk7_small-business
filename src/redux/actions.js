@@ -11,3 +11,10 @@ export const deleteShop = (index) => {
     value: index
   }
 }
+
+export const setUser = (user) => {
+  return {
+    type: "SET_USER",
+    value: user,
+  }
+}

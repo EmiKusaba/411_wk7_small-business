@@ -1,7 +1,7 @@
 export default {
   user: {
-    username: 'test-user-1',
-    email: 'test-user@example.com'
+    username: 'Guest User',
+    email: 'guest-user@example.com'
   },
 
   shops: [

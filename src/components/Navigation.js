@@ -2,7 +2,7 @@ import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
 import { Link, useHistory } from 'react-router-dom'
-import cookie from "cookie";
+import { checkAuth } from "../Router";
 
 const Navigation = (props) => {
   const history = useHistory();
@@ -20,15 +20,19 @@ const Navigation = (props) => {
           <li className="nav-list-item">
             <Link to="/listings">Listings</Link>
           </li>
-          <li className="nav-list-item">
-            <Link to="/add">Add</Link>
-          </li >
+          {
+            checkAuth() ? (
+              <li className="nav-list-item">
+                <Link to="/add">Add</Link>
+              </li >
+            ) : null
+          }
           <li className="nav-list-item"
             onClick={() => {
               document.cookie = "loggedIn="
               history.push("/login");
             }}>
-            {cookie.parse(document.cookie)["loggedIn"] ? "Logout" : "Login"}
+            <Link>{checkAuth() ? "Logout" : "Login"}</Link>
           </li>
         </ul>
       </Toolbar>

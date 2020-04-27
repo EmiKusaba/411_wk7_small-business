@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
-import LogIn from './components/LogIn'
+import LogIn from './containers/LogIn'
 import Listings from './containers/Listings'
 import Details from './containers/Details'
 import AddShop from "./containers/AddShop";

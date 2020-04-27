@@ -33,6 +33,9 @@ class AddShop extends Component {
     this.setState(state)
   }
 
+  componentDidUpdate() {
+  }
+
   render() {
     return (
       <div className="LogIn">
