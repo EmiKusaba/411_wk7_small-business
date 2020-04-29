@@ -1,30 +1,64 @@
 import React from 'react'
 import mapboxgl from "mapbox-gl";
 
-
 class Map extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      hasMap: false,
+    }
+  }
+
   componentDidMount() {
+    const address = this.props.address;
+    const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${address}.json?country=US&access_token=pk.eyJ1IjoiZW1pa3VzYWJhIiwiYSI6ImNrOWxudHVhaDBlNDIzZnFzZHk5YTlmeG8ifQ.tnFptw0938NlNdsem5LuRA`
+    fetch(url)
+      .then(res => res.json())
+      .then(response => {
+        this.createMap(response);
+      });
+  }
+
+  createMap(geocode) {
+    if (!geocode) {
+      return;
+    }
+
+    if (!geocode.features) {
+      return;
+    }
+
+    const feature = geocode.features[0];
+    const lng = feature.center[0];
+    const lat = feature.center[1];
+
     mapboxgl.accessToken = "pk.eyJ1IjoiZW1pa3VzYWJhIiwiYSI6ImNrOWxudHVhaDBlNDIzZnFzZHk5YTlmeG8ifQ.tnFptw0938NlNdsem5LuRA";
     const map = new mapboxgl.Map({
       container: this.mapContainer,
       style: "mapbox://styles/mapbox/streets-v11",
-      center: [this.props.lng, this.props.lat],
-      zoom: this.props.zoom,
+      center: [lng, lat],
+      zoom: this.props.zoom || 16,
     });
 
     new mapboxgl.Marker()
-    .setLngLat([this.props.lng, this.props.lat])
-    .addTo(map);
+      .setLngLat([lng, lat])
+      .addTo(map);
+
+    this.setState({
+      hasMap: true,
+    });
   }
 
   render() {
-    return (
+    const map = (
       <div>
         <div ref={el => this.mapContainer = el}
-          style={{ height: "100%", width: "100%" }} 
-          />
+          style={{ height: "100%", width: "100%" }}
+        />
       </div>
-    )
+    );
+
+    return map;
   }
 }
 

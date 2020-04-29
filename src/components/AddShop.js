@@ -4,6 +4,7 @@ import {
   Button,
   Container
 } from '@material-ui/core'
+import Map from './Map'
 
 class AddShop extends Component {
   state = {
@@ -17,7 +18,7 @@ class AddShop extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const payload = { ...this.state };
-    this.props.addShop(payload); 
+    this.props.addShop(payload);
     this.props.history.push("/listings");
   }
 
@@ -33,13 +34,11 @@ class AddShop extends Component {
     this.setState(state)
   }
 
-  componentDidUpdate() {
-  }
-
   render() {
     return (
       <div className="LogIn">
         <Container maxWidth="sm">
+          <h4>Logged in as: {this.props.user.username}</h4>
           <form className="login-form" onSubmit={this.handleSubmit}>
             <TextField
               required
@@ -82,6 +81,7 @@ class AddShop extends Component {
               variant="contained"
               color="primary">Save</Button>
           </form>
+          
         </Container>
       </div>
     );

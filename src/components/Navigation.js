@@ -30,9 +30,8 @@ const Navigation = (props) => {
           <li className="nav-list-item"
             onClick={() => {
               document.cookie = "loggedIn="
-              history.push("/login");
             }}>
-            <Link>{checkAuth() ? "Logout" : "Login"}</Link>
+            <Link to="/login">{checkAuth() ? "Logout" : "Login"}</Link>
           </li>
         </ul>
       </Toolbar>

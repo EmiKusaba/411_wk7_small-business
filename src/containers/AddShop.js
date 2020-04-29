@@ -3,7 +3,9 @@ import AddShop from "../components/AddShop";
 import { addShop } from "../redux/actions";
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    user: state.user,
+  };
 };
 
 const mapDispatchToProps = dispatch => {

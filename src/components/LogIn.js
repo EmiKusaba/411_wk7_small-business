@@ -35,7 +35,6 @@ class LogIn extends Component {
     this.props.history.push("/listings");
   }
   render() {
-    console.log(this.props)
     return (
       <div className="App">
         <Container maxWidth="sm">

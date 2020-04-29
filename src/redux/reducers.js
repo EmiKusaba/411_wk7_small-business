@@ -3,7 +3,6 @@ import { combineReducers } from 'redux'
 const user = (state = null, action) => {
   switch (action.type) {
     case 'SET_USER':
-      console.log(action.value);
       return action.value;
     default:
       return state
@@ -13,7 +12,6 @@ const user = (state = null, action) => {
 const shops = (state = [], action) => {
   switch (action.type) {
     case 'ADD_SHOP':
-      console.log(action.value);
       return [...state, action.value];
     case 'DELETE_SHOP':
       const shops = [...state];
