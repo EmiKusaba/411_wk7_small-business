@@ -12,7 +12,7 @@ class Map extends React.Component {
       zoom: this.props.zoom,
     });
 
-    const marker = new mapboxgl.Marker()
+    new mapboxgl.Marker()
     .setLngLat([this.props.lng, this.props.lat])
     .addTo(map);
   }
