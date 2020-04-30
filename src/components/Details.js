@@ -5,12 +5,12 @@ import Map from "./Map";
 class Details extends React.Component {
   render() {
     const id = this.props.match.params.id
-    const shop = this.props.shops.find(s => s.id == id)
+    const shop = this.props.shops.find(s => s.Id == id)
 
     return (
       <Container maxWidth="sm" className="shop-container">
         <Paper className="shop-paper">
-          <h2>{shop.name}</h2>
+          <h2>{shop.Name}</h2>
 
           {
             Object.keys(shop).map((key, idx) => {

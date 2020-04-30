@@ -13,6 +13,7 @@ class AddShop extends Component {
     phone: '',
     hours: '',
     address: '',
+    description: '',
   }
 
   handleSubmit = (e) => {
@@ -45,7 +46,7 @@ class AddShop extends Component {
               onChange={this.handleTextChange}
               value={this.state.id}
               name="id"
-              label="id"
+              label="Id"
               type="text" />
             <TextField
               required
@@ -75,13 +76,21 @@ class AddShop extends Component {
               name="address"
               label="Address"
               type="text" />
+            <TextField
+              required
+              onChange={this.handleTextChange}
+              value={this.state.description}
+              name="descriotion"
+              label="Description"
+              type="text" />
+
             <Button
               type="submit"
               className="login-button"
               variant="contained"
               color="primary">Save</Button>
+
           </form>
-          
         </Container>
       </div>
     );

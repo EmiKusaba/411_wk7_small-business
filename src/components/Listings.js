@@ -24,22 +24,24 @@ const Listings = (props) => {
                     <TableRow>
                         <TableCell>Id</TableCell>
                         <TableCell>Name</TableCell>
-                        <TableCell>Discription</TableCell>
+                        <TableCell>Phone</TableCell>
                         <TableCell>Hours</TableCell>
                         <TableCell>Address</TableCell>
+                        <TableCell>Description</TableCell>
                         <TableCell>Delete</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {props.shops.map((shop, idx) => (
-                        <TableRow key={shop.id}>
+                        <TableRow key={shop.Id}>
                             <TableCell component="th" scope="row">
-                                {shop.id}
+                                {shop.Id}
                             </TableCell>
-                            <TableCell style={{ "color": "blue", "text-decoration": "underline" }}><Link to={`/shop/${shop.id}`}>{shop["name"]}</Link></TableCell>
-                            <TableCell>{shop["phone"]}</TableCell>
-                            <TableCell>{shop["hours"]}</TableCell>
-                            <TableCell>{shop["address"]}</TableCell>
+                            <TableCell style={{ "color": "blue", "text-decoration": "underline" }}><Link to={`/shop/${shop.Id}`}>{shop["Name"]}</Link></TableCell>
+                            <TableCell>{shop["Phone"]}</TableCell>
+                            <TableCell>{shop["Hours"]}</TableCell>
+                            <TableCell>{shop["Address"]}</TableCell>
+                            <TableCell>{shop["Description"]}</TableCell>
                             <TableCell>
                                 <DeleteIcon
                                     // add onClick method here
