@@ -8,12 +8,12 @@ import Map from './Map'
 
 class AddShop extends Component {
   state = {
-    id: '',
-    name: '',
-    phone: '',
-    hours: '',
-    address: '',
-    description: '',
+    Id: '',
+    Name: '',
+    Phone: '',
+    Hours: '',
+    Address: '',
+    Description: '',
   }
 
   handleSubmit = (e) => {
@@ -45,42 +45,42 @@ class AddShop extends Component {
               required
               onChange={this.handleTextChange}
               value={this.state.id}
-              name="id"
+              name="Id"
               label="Id"
               type="text" />
             <TextField
               required
               onChange={this.handleTextChange}
               value={this.state.name}
-              name="name"
+              name="Name"
               label="Name"
               type="text" />
             <TextField
               required
               onChange={this.handleTextChange}
               value={this.state.phone}
-              name="phone"
+              name="Phone"
               label="Phone"
               type="text" />
             <TextField
               required
               onChange={this.handleTextChange}
               value={this.state.hours}
-              name="hours"
+              name="Hours"
               label="Hours"
               type="text" />
             <TextField
               required
               onChange={this.handleTextChange}
               value={this.state.address}
-              name="address"
+              name="Address"
               label="Address"
               type="text" />
             <TextField
               required
               onChange={this.handleTextChange}
               value={this.state.description}
-              name="descriotion"
+              name="Description"
               label="Description"
               type="text" />
 
